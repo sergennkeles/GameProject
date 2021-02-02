@@ -1,4 +1,4 @@
 # GameProject
 Kimlik Doğrulamalı Sayı Tahmin Oyunu
 
-Mernis SoapClient ile kimlim doğrulaması yaparak oyunu oynayabilirsiniz. 
+Mernis SoapClient ile kimlik doğrulaması yaparak oyunu oynayabilirsiniz. 
