@@ -9,25 +9,22 @@ namespace BusinessLayer.Concrete
 {
     public class SalesManager :ICampaignDal
     {
-      //Kampanyaları eklediğimiz class'ımız
+        //Kampanyaları eklediğimiz class'ımız
 
-        List<Campaign> _campaign;
-        public SalesManager()
+        ICampaignDal _campaignDal;
+        public SalesManager(ICampaignDal campaignDal)
         {
-            _campaign = new List<Campaign> { 
-                new Campaign { CampaignName = "Standart" }, 
-                new Campaign { CampaignName = "Vip" },
-                new Campaign { CampaignName = "Premium" }};
+            _campaignDal = campaignDal;
         }
 
         public void Add(Campaign campaign)
         {
-            _campaign.Add(campaign);
+            _campaignDal.Add(campaign);
         }
 
         public List<Campaign> GetCampaigns()
         {
-            return _campaign;
+            return _campaignDal.GetCampaigns();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace DataAccessLayer.Concrete
             Console.Write("Tc No giriniz: ");
             gamer.TcNo =Convert.ToInt64(Console.ReadLine());
 
-            Console.Write("Doğum tarihi giriniz: ");
+            Console.Write("Doğum tarihinizi YYYY/AA/GG şeklinde giriniz: ");
             gamer.Birthday = Convert.ToDateTime(Console.ReadLine());
         }
     }

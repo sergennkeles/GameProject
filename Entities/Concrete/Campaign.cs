@@ -7,8 +7,8 @@ namespace EntitiesLayer.Concrete
 {
     public class Campaign:IEntity
     {
-  
 
+     
         public string CampaignName { get; set; }
     }
 }

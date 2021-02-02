@@ -12,23 +12,23 @@ namespace GameProject
         static void Main(string[] args)
         { 
             Gamer gamer1 = new Gamer();
-            
             InMemoryDal inMemoryDal = new InMemoryDal();
-           MernisAdapterService mernisAdapterService = new MernisAdapterService();
-            SalesManager salesManager = new SalesManager();
+            SalesDal salesDal = new SalesDal();
+            MernisAdapterService mernisAdapterService = new MernisAdapterService();
+       
          
             TahminManager tahminManager = new TahminManager();
             inMemoryDal.Add(gamer1);
-           
 
-            GamerManager gamerManager = new GamerManager(inMemoryDal,salesManager);
-      
+
+            GamerManager gamerManager = new GamerManager(inMemoryDal);
+
             foreach (var gamer in gamerManager.GetAllGamer())
             {
                 if (mernisAdapterService.CheckGamer(gamer))
                 {
-                    Console.WriteLine("Merhaba, " + gamer.FirstName+ " Hoşgeldiniz.");
-                    tahminManager.RandomNumber();
+                    Console.WriteLine("Merhaba, " + gamer.FirstName + " Hoşgeldiniz");
+                    tahminManager.RandomNumber(gamer);
                 }
                 else
                 {
@@ -37,10 +37,10 @@ namespace GameProject
 
 
             }
-        
-        
-            
-            
+
+
+
+
         }
     }
 }
