@@ -40,6 +40,7 @@ namespace BusinessLayer.Concrete
                     cevap = Console.ReadLine();
                     if (cevap == "e") // Kullanıcı tekrar kullanmak isterse RandomNumber() methodunu tekrar çalıştır dedik.
                     {
+                        sayac = 3;
                         RandomNumber(gamer);
 
                     }
@@ -111,6 +112,7 @@ namespace BusinessLayer.Concrete
                             break;
                         }
                     }
+                    
 
                 }
             }
